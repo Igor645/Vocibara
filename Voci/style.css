@@ -1,0 +1,576 @@
+:root {
+    --shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;;
+    --purple: rgb(81, 81, 233);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+/*======================Header=========================*/
+header{
+    background-color: white;
+    width: 100%;
+    box-shadow: var(--shadow);
+    border-bottom: solid 0.001em lightgrey;
+}
+
+.pageName{
+    font-size: 3.5rem;
+    margin-left: 1%;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: black;
+    align-self: center;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.homeButton:hover{
+    cursor: pointer;
+    background-color: rgb(236, 234, 234);
+}
+
+.homeButton{
+    display: flex;
+    height: 100%;
+    width: fit-content;
+    padding-right: 2%;
+}
+
+.logoContainer{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    position: relative;
+    min-width: 9vw;
+    margin: 2%;
+}
+
+.logo{
+    width: 2.5vw;
+    height: auto;
+    right: 0;
+    position: absolute;
+}
+
+.capy{
+    width: 7vw;
+    height: auto;
+    margin-top: 1.7vw;
+}
+/*======================Body===========================*/
+body{
+    /*background-image: linear-gradient(to top, var(--lightturqouise) 0%, var(--lightpink) 76%);*/
+    background-image: url(images/education.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100%;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    overflow-y: scroll; 
+}
+
+body::-webkit-scrollbar {
+    display: none; 
+}
+
+img {
+    -webkit-user-drag: none; /* Safari */
+    -khtml-user-drag: none; /* Konqueror HTML */
+    -moz-user-drag: none; /* Firefox */
+    -o-user-drag: none; /* Opera */
+    user-select: none;
+  }
+
+.web-content{
+    width: 70%;
+    margin-left: 15%;
+    margin-right: 15%;
+    background-color: rgba(255, 255, 255, 0.93);
+    height: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+/*====================Circle-Buttons=======================*/
+.buttonContainer{
+    margin-top: 2%;
+    margin-bottom: 2%;
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    height: fit-content;
+    justify-content: space-between;
+}
+
+.circleButton{
+    box-shadow: var(--shadow);
+    width: 28vw;
+    height: 28vw;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.circleButton:hover{
+    -webkit-filter: brightness(80%);
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.buttonIcon{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.buttonDetails{
+    background-color: white;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.buttonTitle{
+    width: 100%;
+    box-shadow: var(--shadow);
+    background-color: var(--purple);
+    color: white;
+    font-size: 3rem;
+    text-align: center;
+}
+
+.buttonText{
+    margin: 3%;
+    font-size: 1.5rem;
+}
+
+.source{
+    margin-top: auto;
+    margin-left: auto;
+    padding: 0.3%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/*=====================Create=============================*/
+.createContainer{
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    align-self: center;
+    padding: 2%;
+    box-shadow: var(--shadow);
+    margin-top: auto;
+    margin-bottom: auto;
+    background-color: white;
+}
+
+.inputDemand{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+}
+
+.listNameInput{
+    width: 40%;
+    margin-bottom: 4%;
+    font-size: 1.2rem;
+}
+
+.vocInput{
+    font-size: 1.2rem;
+    color: black;
+    resize: none;
+    padding: 1%;
+}
+
+.vocInput::placeholder, .listNameInput::placeholder {
+    color: var(--placeholder-color);
+  }
+
+.submit{
+    margin-top: 2%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+    padding: 1%;
+    background-color: var(--purple);
+    color: white;
+    width: fit-content;
+    align-self: center;
+    box-shadow: var(--shadow);
+}
+
+.submit:hover{
+    background-color: rgb(6, 6, 124);
+    cursor: pointer;
+}
+/*===================ListDisplay==========================*/
+.vocabularyContainer{
+    margin: 5%;
+    margin-top: 5%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.list{
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 2%;
+    max-width: 30%;
+    min-width: 30%;
+    min-height: fit-content;
+    max-height: fit-content;
+    box-shadow: var(--shadow);
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.list:hover{
+    background-color: rgb(238, 236, 236);
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.listName{
+    font-size: 2rem;
+    border-bottom: 0.01em solid lightgray;
+    padding: 2%;
+    box-shadow: var(--shadow);
+    background-color: var(--purple);
+    color: white;;
+}
+
+.vocExample{
+    display: flex;
+    flex-direction: column;
+    padding: 10%;
+}
+
+.example{
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.word{
+    max-width: 47%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.indicator{
+    font-size: 3rem;
+    padding: 2%;
+    font-family: Arial, Helvetica, sans-serif;
+    box-shadow: var(--shadow);
+    background-color: var(--purple);
+    color: white;;
+}
+.listButtons{
+    border-top: lightgray 0.01em solid;
+    margin-top: auto;
+    width: 80%;
+    align-self: center;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.deleteButton, .editButton{
+    text-align: center;
+    color: lightgray;
+    font-size: 1.3rem;
+    padding: 2%;
+}
+
+.deleteButton:hover, .editButton:hover{
+    text-decoration: underline;
+}
+/*=====================Study==============================*/
+.card{
+    box-shadow: var(--shadow);
+    width: 60%;
+    align-self: center;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 3%;
+    min-height: 30vw;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    overflow-wrap: break-word;
+}
+
+.promptText{
+    width: 90%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    align-self: center;
+}
+
+.swipe-left{
+    animation-name: swipe-left;
+    animation-duration: 0.4s;
+    animation-timing-function: linear;
+}
+
+.swipe-right{
+    animation-name: swipe-right;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+}
+
+.pop-up{
+    animation-name: pop-up;
+    animation-duration: 0.4s;
+    animation-timing-function: linear;
+}
+  
+@keyframes swipe-left {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-400%);
+    }
+}
+
+@keyframes swipe-right {
+    0% {
+        transform: translateX(0%);
+      }
+      10%{
+        transform: rotate(10deg);
+      }
+      30%{
+        transform: rotate(-20deg);
+      }
+      50%{
+        transform: rotate(30deg);
+      }
+      100% {
+        transform: translateY(400%);
+      }
+}
+
+@keyframes pop-up{
+    0% {
+        transform: scale(0);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.prompt{
+    width: 100%;
+    font-size: 3rem;
+}
+
+.solutionText{
+    width: 100%;
+    font-size: 2rem;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.studyButtons{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.invertButton, .muteButton{
+    box-shadow: var(--shadow);
+    width: 7vw;
+    height: 7vw;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 3%;
+}
+
+.invertButton:hover, .muteButton:hover{
+    -webkit-filter: brightness(80%);
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.inversion{
+    animation-name: inversion;
+    animation-duration: 0.25s;
+    animation-timing-function: linear;
+}
+
+@keyframes inversion{
+    from{
+        transform: rotate(0);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+.invertIcon{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#vocAnswer{
+    width: 30%;
+    align-self: center;
+    font-size: 2rem;
+}
+
+.solution{
+    position: fixed;
+    box-shadow: var(--shadow);
+    width: 30%;
+    align-self: center;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 3%;
+    min-height: 20vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    overflow-wrap: break-word;
+    right: 0;
+    top: 0;
+    z-index: 1;
+}
+
+.solutionTitle{
+    width: 100%;
+    box-shadow: var(--shadow);
+    background-color: var(--purple);
+    color: white;
+    font-size: 3rem;
+    text-align: center;
+}
+
+.hidden {
+    visibility: hidden; /* hide the div by default */
+  }
+  
+  .slide-in {
+    animation-name: slide-in;
+    animation-duration: 0.5s;
+    animation-timing-function: forwards;
+  }
+  
+  .slide-out {
+    animation-name: slide-out;
+    animation-duration: 0.5s;
+    animation-timing-function: forwards;
+  }
+  
+  @keyframes slide-in {
+    from {
+      transform: translateY(-100%); /* start the animation off-screen to the right */
+    }
+    to {
+      transform: translateY(0); /* end the animation at the original position */
+    }
+  }
+  
+  @keyframes slide-out {
+    from {
+      transform: translateY(0); /* start the animation at the original position */
+    }
+    to {
+      transform: translateY(-100%); /* end the animation off-screen to the right */
+    }
+  }
+
+/*=====================Results============================*/
+.resultContainer{
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    min-height: 40vw;
+    align-self: center;
+    margin-top: auto;
+    margin-bottom: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+}
+
+.resultDetails{
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    margin-bottom: auto;
+    justify-content: space-evenly;
+}
+
+.resultTitle{
+    font-size: 3rem;
+    padding: 5%;
+    margin-top: 0;
+    box-shadow: var(--shadow);
+    background-color: var(--purple);
+    color: white;
+    margin-bottom: auto;
+}
+
+.pointContainer{
+    display: flex;
+    font-size: 2rem;
+    justify-content: space-between;
+    width: 45%;
+    margin-left: 10%;
+}
+
+.description{
+    font-size: 2rem;
+    margin-left: 10%;
+}
+
+.trickyWords{
+    resize: none;
+    width: 80%;
+    min-height: 30vh;
+    align-self: center;
+    font-size: 1.3rem;
+}
+
+/*=====================Footer=============================*/
+footer{
+    background-color: var(--purple);
+    color: white;
+    box-shadow: var(--shadow);
+    font-family: Arial, Helvetica, sans-serif;
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+}
+
+.developerContainer{
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    padding-left: 1%;
+}
+
+.developer{
+    font-size: 1.2rem;
+    margin-left: 0.5%;
+}
